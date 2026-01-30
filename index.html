@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sravani Nanubala | AI & Data Science Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #040422;
+            --nav-bg: #19266e;
+            --card-bg: #0f1e50;
+            --accent: #8b42cf;
+            --text-light: #ffffff;
+            --text-dim: #b8b8d8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-dark); color: var(--text-light); font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background-color: var(--nav-bg);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: var(--text-light); transition: 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
+
+        .container { width: 85%; margin: auto; padding: 60px 0; }
+
+        /* Hero Section */
+        .hero { display: flex; justify-content: space-between; align-items: center; min-height: 50vh; }
+        .hero-text h1 { font-size: 3.5rem; }
+        .hero-text span { color: var(--accent); }
+        .hero-img { width: 350px; height: 350px; border-radius: 50%; border: 5px solid var(--accent); object-fit: cover; }
+
+        /* Sections */
+        .section-title { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        
+        .card { 
+            background: var(--card-bg); padding: 25px; border-radius: 12px; 
+            transition: 0.3s; border: 1px solid transparent;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .card h3 { color: lightblue; margin-bottom: 10px; }
+        .card p { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
+        
+        .badge-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+        .badge { background: #1e293b; font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; border: 1px solid #38bdf8; }
+
+        .btn {
+            background: white; color: black; padding: 8px 18px; 
+            border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
+        }
+
+        /* Footer */
+        footer { background: var(--nav-bg); text-align: center; padding: 40px; margin-top: 50px; }
+        .social-links a { font-size: 1.5rem; color: white; margin: 0 15px; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>Sravani.AI</strong></div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Sravani</span></h1>
+                <p>I am a passionate <span id="element"></span></p>
+            </div>
+            <img src="bg.webp" alt="Sravani Nanubala" class="hero-img">
+        </section>
+
+        <section id="about" style="margin-top: 50px;">
+            <h2 class="section-title">About Me</h2>
+            <p style="color: var(--text-dim); line-height: 1.8;">
+                AI and Data Science undergraduate at <strong>The Apollo University</strong>. 
+                I specialize in <strong>Prompt Engineering</strong>, AI tool integration, and building applied AI solutions 
+                like chatbots, dashboards, and automation workflows[cite: 106]. 
+                I am proficient in <strong>Python</strong>, machine learning fundamentals, and data analysis[cite: 105].
+            </p>
+        </section>
+
+        <section id="experience" style="margin-top: 80px;">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Prompt Engineering Intern</h3>
+                    <p><strong>Excelerate</strong> | May 2025 – July 2025 [cite: 68, 69]</p>
+                    <p>Designed and refined prompts to improve accuracy and task relevance in LLM outputs[cite: 70].</p>
+                </div>
+                <div class="card">
+                    <h3>AI Research Intern</h3>
+                    <p><strong>DST Curie AI</strong> | May 2025 – July 2025 [cite: 73, 74]</p>
+                    <p>Leveraged 20+ AI tools to deliver creative and technical outputs for research automation[cite: 75].</p>
+                </div>
+                <div class="card">
+                    <h3>Data Science Intern</h3>
+                    <p><strong>Prodigy InfoTech</strong> | Dec 2024 – Feb 2025 [cite: 77, 78]</p>
+                    <p>Developed predictive models and analyzed market trends to support data-driven decisions[cite: 79].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" style="margin-top: 80px;">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>CloudShare</h3>
+                    <div class="badge-list"><span class="badge">GCP</span> <span class="badge">Auth</span></div>
+                    <p>Secure cloud file storage system with user authentication and drag-and-drop uploads[cite: 83, 85].</p>
+                    <a href="https://github.com/NanubalaSravani" class="btn">View Code</a>
+                </div>
+                <div class="card">
+                    <h3>Airport Management</h3>
+                    <div class="badge-list"><span class="badge">Python</span> <span class="badge">MySQL</span></div>
+                    <p>Database system for managing flight operations and secure admin authentication[cite: 89, 90].</p>
+                    <a href="https://github.com/NanubalaSravani" class="btn">View Code</a>
+                </div>
+                <div class="card">
+                    <h3>Virtual Calculator</h3>
+                    <div class="badge-list"><span class="badge">OpenCV</span> <span class="badge">JavaScript</span></div>
+                    <p>Real-time arithmetic tool utilizing advanced DOM manipulation and hand-gesture tracking[cite: 93, 94].</p>
+                    <a href="#" class="btn">Live Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 80px; text-align: center;">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Ready to collaborate on AI and Data Science projects.</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="mailto:sravaninanubala6@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/sravani-nanubala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/NanubalaSravani" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sravani Nanubala. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['AI Developer.', 'Data Science Student.', 'Prompt Engineer.', 'Python Enthusiast.'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+</html>
