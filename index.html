@@ -27,39 +27,48 @@
         }
         nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 25px; }
-        nav ul li a { text-decoration: none; color: var(--text-light); transition: 0.3s; }
+        nav ul li a { text-decoration: none; color: var(--text-light); transition: 0.3s; font-size: 0.9rem;}
         nav ul li a:hover { color: var(--accent); }
 
         .container { width: 85%; margin: auto; padding: 60px 0; }
 
         /* Hero Section */
-        .hero { display: flex; justify-content: space-between; align-items: center; min-height: 50vh; }
+        .hero { display: flex; justify-content: space-between; align-items: center; min-height: 40vh; margin-bottom: 50px;}
         .hero-text h1 { font-size: 3.5rem; }
         .hero-text span { color: var(--accent); }
-        .hero-img { width: 350px; height: 350px; border-radius: 50%; border: 5px solid var(--accent); object-fit: cover; }
+        .hero-img { width: 280px; height: 280px; border-radius: 50%; border: 5px solid var(--accent); object-fit: cover; }
 
         /* Sections */
-        .section-title { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 15px; }
+        section { padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .section-title { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 15px; color: var(--text-light); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         
         .card { 
             background: var(--card-bg); padding: 25px; border-radius: 12px; 
-            transition: 0.3s; border: 1px solid transparent;
+            transition: 0.3s; border: 1px solid transparent; height: 100%;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
-        .card h3 { color: lightblue; margin-bottom: 10px; }
-        .card p { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { color: #93c5fd; margin-bottom: 10px; font-size: 1.2rem;}
+        .card h4 { color: var(--accent); font-size: 0.9rem; margin-bottom: 10px;}
+        .card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6;}
         
-        .badge-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
-        .badge { background: #1e293b; font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; border: 1px solid #38bdf8; }
+        .badge-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0;}
+        .badge { background: #1e293b; font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; border: 1px solid #38bdf8; color: #38bdf8;}
+
+        /* Skills List */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 15px; }
+        .skill-category { background: var(--card-bg); padding: 20px; border-radius: 10px; flex: 1; min-width: 250px;}
+        .skill-category h4 { margin-bottom: 15px; color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 5px;}
+        .skill-item { display: inline-block; background: #0f172a; padding: 5px 12px; border-radius: 5px; margin: 4px; font-size: 0.85rem; border: 1px solid #1e293b;}
 
         .btn {
-            background: white; color: black; padding: 8px 18px; 
+            background: white; color: black; padding: 10px 20px; 
             border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
+            display: inline-block; margin-top: 15px; transition: 0.3s;
         }
+        .btn:hover { background: var(--accent); color: white;}
 
-        /* Footer */
-        footer { background: var(--nav-bg); text-align: center; padding: 40px; margin-top: 50px; }
+        footer { background: var(--nav-bg); text-align: center; padding: 40px; }
         .social-links a { font-size: 1.5rem; color: white; margin: 0 15px; transition: 0.3s; }
         .social-links a:hover { color: var(--accent); }
     </style>
@@ -67,87 +76,163 @@
 <body>
 
     <nav>
-        <div class="logo"><strong>Sravani.AI</strong></div>
+        <div class="logo"><strong>Sravani.Portfolio</strong></div>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-text">
                 <h1>Hi, I'm <span>Sravani</span></h1>
-                <p>I am a passionate <span id="element"></span></p>
+                <p>AI & Data Science Student at The Apollo University [cite: 57, 58]</p>
+                <p>I am a <span id="element"></span></p>
+                <a href="mailto:sravaninanubala6@gmail.com" class="btn">Hire Me</a>
             </div>
-            <img src="bg.webp" alt="Sravani Nanubala" class="hero-img">
+            <img src="bg.webp" alt="Profile" class="hero-img">
         </section>
 
-        <section id="about" style="margin-top: 50px;">
+        <section id="about">
             <h2 class="section-title">About Me</h2>
             <p style="color: var(--text-dim); line-height: 1.8;">
-                AI and Data Science undergraduate at <strong>The Apollo University</strong>. 
-                I specialize in <strong>Prompt Engineering</strong>, AI tool integration, and building applied AI solutions 
-                like chatbots, dashboards, and automation workflows[cite: 106]. 
-                I am proficient in <strong>Python</strong>, machine learning fundamentals, and data analysis[cite: 105].
+                AI and Data Science undergraduate with strong proficiency in Python, machine learning fundamentals, and data analysis[cite: 105]. 
+                I have experience in prompt engineering, AI tool integration, and building applied AI solutions like chatbots and automation workflows[cite: 106]. 
+                My goal is to leverage my technical skills to create innovative solutions for real-world problems[cite: 29].
             </p>
         </section>
 
-        <section id="experience" style="margin-top: 80px;">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Prompt Engineering Intern</h3>
-                    <p><strong>Excelerate</strong> | May 2025 – July 2025 [cite: 68, 69]</p>
-                    <p>Designed and refined prompts to improve accuracy and task relevance in LLM outputs[cite: 70].</p>
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <span class="skill-item">Python (Proficient) [cite: 62]</span>
+                    <span class="skill-item">Java [cite: 62]</span>
+                    <span class="skill-item">C [cite: 62]</span>
+                    <span class="skill-item">SQL [cite: 62]</span>
+                    <span class="skill-item">JavaScript [cite: 62]</span>
+                    <span class="skill-item">HTML/CSS [cite: 62]</span>
+                    <span class="skill-item">R [cite: 62]</span>
                 </div>
-                <div class="card">
-                    <h3>AI Research Intern</h3>
-                    <p><strong>DST Curie AI</strong> | May 2025 – July 2025 [cite: 73, 74]</p>
-                    <p>Leveraged 20+ AI tools to deliver creative and technical outputs for research automation[cite: 75].</p>
+                <div class="skill-category">
+                    <h4>AI & Data Science</h4>
+                    <span class="skill-item">Machine Learning [cite: 63]</span>
+                    <span class="skill-item">Data Analysis [cite: 63]</span>
+                    <span class="skill-item">Data Visualization [cite: 63]</span>
+                    <span class="skill-item">Prompt Engineering [cite: 63]</span>
+                    <span class="skill-item">NLP [cite: 27]</span>
                 </div>
-                <div class="card">
-                    <h3>Data Science Intern</h3>
-                    <p><strong>Prodigy InfoTech</strong> | Dec 2024 – Feb 2025 [cite: 77, 78]</p>
-                    <p>Developed predictive models and analyzed market trends to support data-driven decisions[cite: 79].</p>
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <span class="skill-item">Google Cloud (GCP) [cite: 64]</span>
+                    <span class="skill-item">Jupyter Notebook [cite: 64]</span>
+                    <span class="skill-item">MySQL [cite: 64]</span>
+                    <span class="skill-item">Git/GitHub [cite: 64]</span>
                 </div>
             </div>
         </section>
 
-        <section id="projects" style="margin-top: 80px;">
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>May 2025 - July 2025 [cite: 69]</h4>
+                    <h3>Prompt Engineering Intern</h3>
+                    <p><strong>Excelerate</strong> [cite: 67]</p>
+                    <p>• Designed and refined prompts to improve accuracy and task relevance in LLM outputs[cite: 70].</p>
+                    <p>• Optimized performance through data-driven analysis across diverse use cases[cite: 71].</p>
+                </div>
+                <div class="card">
+                    <h4>May 2025 - July 2025 [cite: 74]</h4>
+                    <h3>AI Research Intern</h3>
+                    <p><strong>DST Curie AI</strong> [cite: 72]</p>
+                    <p>• Leveraged 20+ AI tools to deliver 10+ creative and technical outputs[cite: 75].</p>
+                    <p>• Applied AI techniques for research optimization and automation workflows[cite: 76].</p>
+                </div>
+                <div class="card">
+                    <h4>Dec 2024 - Feb 2025 [cite: 78]</h4>
+                    <h3>Data Science Intern</h3>
+                    <p><strong>Prodigy InfoTech</strong> [cite: 77]</p>
+                    <p>• Developed predictive models and identified market trends for data-driven decisions[cite: 79].</p>
+                    <p>• Used financial analysis and security protocols to identify risks in datasets[cite: 80].</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
             <h2 class="section-title">Featured Projects</h2>
             <div class="grid">
                 <div class="card">
                     <h3>CloudShare</h3>
-                    <div class="badge-list"><span class="badge">GCP</span> <span class="badge">Auth</span></div>
-                    <p>Secure cloud file storage system with user authentication and drag-and-drop uploads[cite: 83, 85].</p>
-                    <a href="https://github.com/NanubalaSravani" class="btn">View Code</a>
+                    <div class="badge-list"><span class="badge">Cloud Storage</span> <span class="badge">Security</span></div>
+                    <p>Built a cloud-based storage system with secure user authentication and file preview capabilities[cite: 85].</p>
+                    <p>Integrated drag-and-drop and click-based upload features[cite: 86].</p>
                 </div>
                 <div class="card">
-                    <h3>Airport Management</h3>
+                    <h3>Airport Management System</h3>
                     <div class="badge-list"><span class="badge">Python</span> <span class="badge">MySQL</span></div>
-                    <p>Database system for managing flight operations and secure admin authentication[cite: 89, 90].</p>
-                    <a href="https://github.com/NanubalaSravani" class="btn">View Code</a>
+                    <p>Developed a Python-based system with MySQL for managing flight databases[cite: 89].</p>
+                    <p>Implemented admin authentication and secure password management[cite: 90].</p>
                 </div>
                 <div class="card">
                     <h3>Virtual Calculator</h3>
-                    <div class="badge-list"><span class="badge">OpenCV</span> <span class="badge">JavaScript</span></div>
-                    <p>Real-time arithmetic tool utilizing advanced DOM manipulation and hand-gesture tracking[cite: 93, 94].</p>
-                    <a href="#" class="btn">Live Demo</a>
+                    <div class="badge-list"><span class="badge">JavaScript</span> <span class="badge">OpenCV</span></div>
+                    <p>Created a real-time arithmetic tool with advanced DOM manipulation[cite: 93].</p>
+                    <p>Integrated OpenCV for hand-tracking-based calculation features[cite: 94].</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" style="margin-top: 80px; text-align: center;">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>Ready to collaborate on AI and Data Science projects.</p>
-            <div class="social-links" style="margin-top: 20px;">
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>The Apollo University [cite: 57]</h3>
+                <p><strong>Bachelor of Technology, AI and Data Science</strong> [cite: 58]</p>
+                <p>Sept 2023 - July 2027 (Expected) [cite: 59]</p>
+                <p>Relevant Coursework: Machine Learning, NLP, Computer Vision, Data Structures, DBMS[cite: 60].</p>
+            </div>
+            <div class="card">
+                <h3>International Delhi Public School [cite: 48]</h3>
+                <p><strong>Intermediate (MPC)</strong> [cite: 49]</p>
+                <p>August 2021 - March 2023 [cite: 49]</p>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2 class="section-title">Certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Google Cloud Computing</h3>
+                    <p>Google Cloud Computing Foundations Certificate [cite: 18, 65]</p>
+                    <p>Facilitator Success: Earned 33 points in Arcade program[cite: 96].</p>
+                </div>
+                <div class="card">
+                    <h3>NPTEL Certifications</h3>
+                    <p>• Python for Data Science [cite: 65, 140]</p>
+                    <p>• Database Management System [cite: 137]</p>
+                </div>
+                <div class="card">
+                    <h3>Cisco & Coursera</h3>
+                    <p>• Cisco Data Analytics Essentials [cite: 65]</p>
+                    <p>• Coursera GenAI for Data Science [cite: 133]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="text-align: center;">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="social-links">
                 <a href="mailto:sravaninanubala6@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/sravani-nanubala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/NanubalaSravani" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
+            <p style="margin-top: 20px; color: var(--text-dim);">Tirupati, Andhra Pradesh, India [cite: 33]</p>
         </section>
     </div>
 
@@ -158,7 +243,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['AI Developer.', 'Data Science Student.', 'Prompt Engineer.', 'Python Enthusiast.'],
+            strings: ['AI Developer.', 'Data Scientist.', 'Prompt Engineer.', 'Web Enthusiast.'],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true
