@@ -7,7 +7,7 @@
 
 Personal portfolio site for **Nanubala Sravani**, a final-year B.Tech CSE (AI & Data Science) student at The Apollo University. The site showcases biometric computer vision research, applied ML systems, full-stack deployments, and solo product execution.
 
-#🔗 Live Demo:** [nanubala-sravani-portfolio.vercel.app](https://nanubala-sravani-portfolio.vercel.app/)
+# 🔗 Live Demo:** [nanubala-sravani-portfolio.vercel.app](https://nanubala-sravani-portfolio.vercel.app/)
 
 ---
 
