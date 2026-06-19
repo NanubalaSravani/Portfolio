@@ -1,0 +1,9 @@
+.app-main {
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    padding-bottom: 0;
+  }
+}
