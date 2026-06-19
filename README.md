@@ -1,137 +1,137 @@
-# Nanubala Sravani — Portfolio
+# Nanubala Sravani | AI & Data Science Engineer — Portfolio
 
-Interactive portfolio website for **Nanubala Sravani**, AI & Data Science Engineer. Built with React + Vite, featuring an academic editorial layout, light/dark theme toggle, scale-focus project carousel, and content sourced from a single data file.
+[![Live Site](https://img.shields.io/badge/Live-Visit%20Site-2ea44f?style=flat-square)](https://nanubala-sravani-portfolio.vercel.app/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Live links
+Personal portfolio site for **Nanubala Sravani**, a final-year B.Tech CSE (AI & Data Science) student at The Apollo University. The site showcases biometric computer vision research, applied ML systems, full-stack deployments, and solo product execution.
 
-- **GitHub:** [github.com/NanubalaSravani](https://github.com/NanubalaSravani)
-- **LinkedIn:** [linkedin.com/in/sravani-nanubala](https://linkedin.com/in/sravani-nanubala)
-- **RidgeVision AI demo:** [sravaninanubala-ridgevision-ai.hf.space](https://sravaninanubala-ridgevision-ai.hf.space)
+**🔗 Live Demo:** [nanubala-sravani-portfolio.vercel.app](https://nanubala-sravani-portfolio.vercel.app/)
 
-## Features
+---
 
-- **Hero** — Professional summary, CTAs, and key accuracy stat
-- **Key Achievements** — Metrics grid with scroll-triggered animations
-- **Projects** — Six featured projects in a horizontal carousel with scale-focus interaction (active card expands, siblings recede)
-- **Skills** — Proficiency bars, certifications, milestones, and soft skills
-- **Contact** — Neumorphic contact cards and message form
-- **Theme toggle** — Light (academic default) and dark modes with smooth 0.6s transitions
-- **Responsive** — Desktop nav, mobile bottom navigation, touch-friendly carousel
+## ✨ Overview
 
-## Tech stack
+This is a single-page portfolio built with React, TypeScript, and Vite — no UI framework, hand-crafted styling, and data-driven content. It highlights:
+
+- **Hero** — intro, role badge, key stat (90% ensemble accuracy), contact shortcuts
+- **Achievements** — metrics on accuracy, dataset size, credentials, and featured project count
+- **Projects** — six featured builds spanning biometric ML, applied ML deployment, LLM/NLP products, mobile (Flutter), computer vision, and data analysis
+- **Skills** — proficiency breakdown across ML/AI, Data, Engineering, and Research, plus soft skills
+- **Contact** — direct links to email, phone, GitHub, and LinkedIn
+- **Theme toggle** — light/dark mode
+- **Mobile navigation** — responsive bottom nav for small screens
+
+## 🛠️ Tech Stack
 
 | Layer | Technology |
-|-------|------------|
-| Framework | React 18 |
-| Build tool | Vite 6 |
+|---|---|
+| Framework | React 18 (function components, hooks) |
 | Language | TypeScript |
-| Styling | CSS custom properties (design tokens) |
-| Fonts | Source Serif 4, Inter, JetBrains Mono, Material Symbols |
+| Build tool | Vite 6 |
+| Styling | Plain CSS (per-component `.css` files) |
+| Fonts | Inter, JetBrains Mono, Source Serif 4, Material Symbols |
+| Deployment | Vercel |
 
-## Getting started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) 18 or later
-- npm
-
-### Install and run
-
-```bash
-git clone https://github.com/NanubalaSravani/portfolio.git
-cd portfolio
-npm install
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173).
-
-### Build for production
-
-```bash
-npm run build
-npm run preview
-```
-
-Output is written to `dist/`.
-
-## Project structure
+## 📁 Project Structure
 
 ```
-portfolio/
+Portfolio/
 ├── public/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   ├── Achievements.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Hero.tsx
-│   │   ├── MobileNav.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── ProjectCard.tsx
-│   │   ├── Projects.tsx
-│   │   ├── ScaleFocusCarousel.tsx
-│   │   ├── Skills.tsx
-│   │   └── ThemeToggle.tsx
+│   │   ├── Navbar.tsx / Navbar.css
+│   │   ├── Hero.tsx / Hero.css
+│   │   ├── Achievements.tsx / Achievements.css
+│   │   ├── Projects.tsx / Projects.css
+│   │   ├── ProjectCard.tsx / ProjectCard.css
+│   │   ├── ScaleFocusCarousel.tsx / ScaleFocusCarousel.css
+│   │   ├── Skills.tsx / Skills.css
+│   │   ├── Contact.tsx / Contact.css
+│   │   ├── ThemeToggle.tsx / ThemeToggle.css
+│   │   └── MobileNav.tsx / MobileNav.css
 │   ├── data/
-│   │   └── portfolio.ts      # All copy, projects, skills, links
-│   ├── hooks/
-│   │   └── useTheme.tsx
-│   ├── App.tsx
-│   ├── index.css             # Design tokens & global styles
-│   └── main.tsx
+│   │   └── portfolio.ts       # All site content (hero, projects, skills, metrics, etc.)
+│   ├── hooks/                 # Custom React hooks
+│   ├── App.tsx                # Top-level layout / section composition
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx                # React entry point
+│   └── vite-env.d.ts
 ├── index.html
 ├── package.json
+├── tsconfig.json / tsconfig.app.json / tsconfig.node.json
 └── vite.config.ts
 ```
 
-## Updating content
+## 🚀 Getting Started
 
-Edit **`src/data/portfolio.ts`** to change:
+### Prerequisites
 
-- Hero text and contact info
-- Metrics and achievements
-- All six projects (problem, approach, outcome, tools, links)
-- Skills, certifications, and milestones
-- Social links
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- npm (comes with Node.js)
 
-No component changes are required for copy updates.
+### Installation
 
-## Deployment
+```bash
+# Clone the repository
+git clone https://github.com/NanubalaSravani/Portfolio.git
+cd Portfolio
 
-### Vercel (recommended)
+# Install dependencies
+npm install
+```
 
-1. Push this repo to GitHub.
-2. Import the project at [vercel.com](https://vercel.com).
-3. Set **Build Command** to `npm run build` and **Output Directory** to `dist`.
-4. Deploy.
+### Development
 
-### GitHub Pages
+```bash
+npm run dev
+```
 
-1. Add a base path to `vite.config.ts` (match your repo name):
+Starts the Vite dev server with hot module reloading (default: `http://localhost:5173`).
 
-   ```ts
-   export default defineConfig({
-     plugins: [react()],
-     base: '/portfolio/',
-   });
-   ```
+### Build
 
-2. Enable **Settings → Pages → Source: GitHub Actions** and use a workflow that runs `npm run build` and uploads `dist/`.
+```bash
+npm run build
+```
 
-### Netlify
+Type-checks the project (`tsc -b`) and produces an optimized production build in `dist/`.
 
-Same as Vercel: build command `npm run build`, publish directory `dist`.
+### Preview
 
-## Featured projects
+```bash
+npm run preview
+```
 
-1. **RidgeVision AI** — Fingerprint-based blood group detection (flagship)
-2. **Blood Bridge AI** — Donor availability prediction via FastAPI
-3. **AI Resume Analyzer** — Groq-powered ATS optimizer
-4. **SkillPath** — Flutter mobile learning app (solo execution)
-5. **Virtual Calculator with Hand Gestures** — MediaPipe + OpenCV
-6. **EDA Portfolio** — Titanic & Age-Gender distribution analysis
+Serves the production build locally to verify it before deploying.
 
-## License
+## ✏️ Editing Content
 
-Personal portfolio — all rights reserved by Nanubala Sravani.
+Almost all site copy — hero text, metrics, project details, skills, certificates, and social links — lives in a single typed data file:
+
+```
+src/data/portfolio.ts
+```
+
+Update the relevant exported object/array (`hero`, `metrics`, `skillProficiencies`, `projects`, `milestones`, `certificates`, `socialLinks`) and the corresponding UI updates automatically — no need to touch component markup for content changes.
+
+## 🌐 Deployment
+
+The live site is deployed on **Vercel**, auto-building from the `main` branch. To deploy your own fork:
+
+1. Push the repo to GitHub.
+2. Import the project on [vercel.com](https://vercel.com/).
+3. Vercel auto-detects the Vite project (build command: `npm run build`, output directory: `dist`).
+
+## 📬 Contact
+
+- **Email:** sravaninanubala6@gmail.com
+- **GitHub:** [@NanubalaSravani](https://github.com/NanubalaSravani)
+- **LinkedIn:** [sravani-nanubala](https://linkedin.com/in/sravani-nanubala)
+
+## 📄 License
+
+This project is personal portfolio source code. Feel free to use it as a structural reference, but please don't reuse the personal content/branding directly.
